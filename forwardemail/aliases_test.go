@@ -45,6 +45,7 @@ func TestClient_GetAlias(t *testing.T) {
 				"labels": [
 				  "catch-all"
 				],
+				"description": "main email",
 				"is_enabled": true,
 				"has_recipient_verification": true,
 				"recipients": [
@@ -70,6 +71,7 @@ func TestClient_GetAlias(t *testing.T) {
 				IsEnabled:                true,
 				HasRecipientVerification: true,
 				Recipients:               []string{"james@rhodes.com"},
+				Description:              "main email",
 				Id:                       "6525b03e0bde8f333ace5824",
 				Object:                   "alias",
 				CreatedAt:                parseTime("2023-10-10T20:12:46.588Z"),
@@ -132,6 +134,7 @@ func TestClient_GetAliases(t *testing.T) {
 					  "catch-all"
 					],
 					"is_enabled": true,
+					"description": "main email",
 					"has_recipient_verification": true,
 					"recipients": [
 					  "james@rhodes.com"
@@ -181,6 +184,7 @@ func TestClient_GetAliases(t *testing.T) {
 					Labels:                   []string{"catch-all"},
 					IsEnabled:                true,
 					HasRecipientVerification: true,
+					Description:              "main email",
 					Recipients:               []string{"james@rhodes.com"},
 					Id:                       "6525b03e0bde8f333ace5824",
 					Object:                   "alias",
@@ -254,6 +258,7 @@ func TestClient_CreateAlias(t *testing.T) {
 				params: AliasParameters{
 					Recipients:               pointSliceOfStrings([]string{"james@rhodes.com"}),
 					Labels:                   pointSliceOfStrings([]string{"catch-all"}),
+					Description:              "main email",
 					IsEnabled:                pointBool(true),
 					HasRecipientVerification: pointBool(true),
 				},
@@ -272,6 +277,7 @@ func TestClient_CreateAlias(t *testing.T) {
 				"labels": [
 				  "catch-all"
 				],
+				Description: "main email",
 				"is_enabled": true,
 				"has_recipient_verification": true,
 				"recipients": [
@@ -296,6 +302,7 @@ func TestClient_CreateAlias(t *testing.T) {
 				Labels:                   []string{"catch-all"},
 				IsEnabled:                true,
 				HasRecipientVerification: true,
+				Description:              "main email",
 				Recipients:               []string{"james@rhodes.com"},
 				Id:                       "6525b03e0bde8f333ace5824",
 				Object:                   "alias",
@@ -348,6 +355,7 @@ func TestClient_UpdateAlias(t *testing.T) {
 				params: AliasParameters{
 					Recipients:               pointSliceOfStrings([]string{"james@rhodes.com"}),
 					Labels:                   pointSliceOfStrings([]string{"catch-all", "friends"}),
+					Description:              "main email",
 					IsEnabled:                pointBool(true),
 					HasRecipientVerification: pointBool(true),
 				},
@@ -367,6 +375,7 @@ func TestClient_UpdateAlias(t *testing.T) {
 				  "catch-all",
 				  "friends"
 				],
+				Description: "main email",
 				"is_enabled": true,
 				"has_recipient_verification": true,
 				"recipients": [
@@ -389,6 +398,7 @@ func TestClient_UpdateAlias(t *testing.T) {
 				},
 				Name:                     "james",
 				Labels:                   []string{"catch-all", "friends"},
+				Description:              "main email",
 				IsEnabled:                true,
 				HasRecipientVerification: true,
 				Recipients:               []string{"james@rhodes.com"},

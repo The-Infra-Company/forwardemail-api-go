@@ -1,7 +1,7 @@
 default: format check lint test
 
-format:
-	go fmt ./...
+fmt:
+	gofumpt -w .
 
 check:
 	go vet ./...
