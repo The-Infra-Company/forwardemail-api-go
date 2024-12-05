@@ -1,5 +1,5 @@
-module github.com/abagayev/go-forwardemail
+module github.com/the-infra-company/forwardemail-api-go
 
-go 1.21
+go 1.23.3
 
-require github.com/google/go-cmp v0.5.9
+require github.com/google/go-cmp v0.6.0
