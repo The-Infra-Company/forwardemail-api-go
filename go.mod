@@ -1,4 +1,4 @@
-module github.com/the-infra-company/forwardemail-api-go
+module github.com/forwardemail/forwardemail-api-go
 
 go 1.23.3
 
